@@ -2,6 +2,9 @@ const fs = require('fs');
 const http = require('http');
 const https = require('https');
 
+const myModule = require('./my-module.js');
+console.log(myModule.myFunction());
+
 console.log("App.js created!");
 
 fs.readFile('file.txt', 'utf8', function (err, data) {
