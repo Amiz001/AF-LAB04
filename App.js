@@ -30,6 +30,16 @@ myPromise.then((result) => {
  console.log(error);
 });
 
+async function myFunction() {
+ try {
+ const result = await myPromise;
+ console.log(result);
+ } catch (error) {
+ console.log(error);
+ }
+}
+myFunction();
+
 
 http.createServer(function (req, res) {
  res.writeHead(200, {'Content-Type': 'text/html'});
