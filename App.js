@@ -17,6 +17,19 @@ fs.writeFile('file.txt', 'Hello World!', function (err) {
  console.log('File saved!');
 });
 
+const myPromise = new Promise((resolve, reject) => {
+ if (condition) {
+ resolve('Success!');
+ } else {
+ reject('Failure!');
+ }
+});
+myPromise.then((result) => {
+ console.log(result);
+}).catch((error) => {
+ console.log(error);
+});
+
 
 http.createServer(function (req, res) {
  res.writeHead(200, {'Content-Type': 'text/html'});
